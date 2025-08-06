@@ -15,4 +15,22 @@ ORDER BY Salary ASC, DEPT_ID DESC;
 SELECT * FROM employees
 WHERE DEPT_ID IN(10,20);
 
+-- Q.5. List the employees who do not belong to Dallas
+SELECT * FROM employees
+WHERE LOC = 'DALLAS';
 
+-- Q.6. List the emp names having length 5
+SELECT * FROM employees
+WHERE LENGTH(FName)=5;
+
+-- Q.7. List the emp names having length 5 and third char is ‘h’
+SELECT * FROM employees
+WHERE LENGTH(FName)=5 AND FName LIKE '__h__';
+
+-- Q.8. List the employees whose name starts with 'c' and ends with 'l'
+SELECT * FROM employees
+WHERE LOWER(FName) LIKE 'c%l';
+
+-- Q.9, List the employees whose id starts with 10
+SELECT * FROM employees 
+WHERE EmpID LIKE '47%';
